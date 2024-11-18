@@ -14,6 +14,9 @@ import { SlControlPause } from "react-icons/sl";
 import FullStoryImg2 from '/assets/images/explore1.jpg'
 import FullStoryImg3 from '/assets/images/explore2.jpg'
 import FullStoryVideo from '/assets/videos/explore.mp4'
+import ChipImg from '/assets/images/chip.jpeg'
+import FrameImg from '/assets/images/frame.png'
+import FrameVideo from '/assets/videos/frame.mp4'
 
 const videoObjects=[
     {
@@ -54,4 +57,4 @@ const VideoButtons=[React.createElement(IoPlayOutline),React.createElement(SlCon
 
 
 
-export { heroImage, heroVideo, smallHeroVideo, videoObjects,VideoButtons,FullStoryImg2,FullStoryImg3,FullStoryVideo }; // Export both images
+export { heroImage, heroVideo, smallHeroVideo, videoObjects,VideoButtons,FullStoryImg2,FullStoryImg3,FullStoryVideo,ChipImg,FrameImg,FrameVideo}; // Export both images
