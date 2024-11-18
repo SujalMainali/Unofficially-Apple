@@ -66,7 +66,7 @@ const Chip = () => {
         <p className='text-2xl text-zinc-600 mb-20'>It's here. The biggest redesign in the history of Apple GPUs.</p>
         <div className='relative w-full h-[850px]' id='ChipVideoDiv'>
             <img src={FrameImg} className='absolute top-0 left-80'></img>
-            <video className='absolute top-[35px] left-[350px] -z-10 scale-[0.99]' ref={videoRef}  muted autoPlay>
+            <video className='absolute top-[32px] left-[350px] -z-10 scale-[1] rounded-3xl' ref={videoRef}  muted autoPlay>
                 <source src={FrameVideo} type="video/mp4" />
             </video>
         </div>

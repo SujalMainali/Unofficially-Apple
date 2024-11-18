@@ -36,5 +36,33 @@ const highlightsTags=[
     },
   ];
 
-export { NavbarList, highlightsTags,models };
+
+  const footerLinks = [
+    {
+      id: 1,
+      title: "Privacy Policy",
+      link: "",
+    },
+    {
+      id: 2,
+      title: "Terms of Use",
+      link: "",
+    },
+    {
+      id: 3,
+      title: "Sales Policy",
+      link: "",
+    },
+    {
+      id: 4,
+      title: "Legal",
+      link: ""
+    },
+    {
+      id: 5,
+      title: "Site Map",
+      link: ""
+    }
+  ]
+export { NavbarList, highlightsTags,models,footerLinks };
 
