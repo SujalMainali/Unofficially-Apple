@@ -17,6 +17,7 @@ export default {
       height:{
         '90vh':'90vh',
         'videoHeight':'661px',
+        'StoryImgHeight':'380px',
       },
       width:{
         'Highlight-width':'6080px',

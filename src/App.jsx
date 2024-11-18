@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar'
 import Hero from './Components/Hero'
 import Highlights from './Components/Highlights'
 import Model from './Components/Model'
+import FullStory from './Components/FullStory'
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Hero />
       <Highlights />
       <Model/>
+      <FullStory/>
     </main>
   )
 }

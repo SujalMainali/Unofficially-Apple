@@ -11,6 +11,9 @@ import highlightVideoFourth from '/assets/videos/hightlight-fourth.mp4'
 import { IoPlayOutline } from "react-icons/io5";
 import { IoReload } from "react-icons/io5";
 import { SlControlPause } from "react-icons/sl";
+import FullStoryImg2 from '/assets/images/explore1.jpg'
+import FullStoryImg3 from '/assets/images/explore2.jpg'
+import FullStoryVideo from '/assets/videos/explore.mp4'
 
 const videoObjects=[
     {
@@ -51,4 +54,4 @@ const VideoButtons=[React.createElement(IoPlayOutline),React.createElement(SlCon
 
 
 
-export { heroImage, heroVideo, smallHeroVideo, videoObjects,VideoButtons }; // Export both images
+export { heroImage, heroVideo, smallHeroVideo, videoObjects,VideoButtons,FullStoryImg2,FullStoryImg3,FullStoryVideo }; // Export both images

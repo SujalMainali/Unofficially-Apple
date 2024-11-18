@@ -1,4 +1,5 @@
 import { useGSAP } from '@gsap/react'
+import { Canvas } from '@react-three/fiber'
 import gsap from 'gsap'
 import React, { useRef } from 'react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -9,7 +10,7 @@ import { models } from '../constants'
 
 const Model = () => {
   const [size,setSize] = useState('small');
-  const [model,setModel] = useState({
+  const [model,setModel] = useState({ //This is used to set the required when the icon is clicked
     title:'iPhone 15 Pro in Natural Titanium',
     color:['#8F8A81','#FFE7B9','#6F6C64','#F5F4F2'],
     img:'',
@@ -45,7 +46,7 @@ const Model = () => {
     max-sm:items-start pl-5 max-sm:mt-10'>
       <h1 className='text-5xl text-gray-400 opacity-0 max-sm:text-3xl modelHeading'>Take a closer look</h1>
 
-      <div className='flex flex-col items-center mt-5'>
+      <div className='flex flex-col items-center mt-5 w-full'>
         <div className='w-full h-[75vh] md:h-[90vh] overflow-hidden'>
           <ModelView
             index={1}
