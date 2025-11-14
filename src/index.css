@@ -2,8 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
     height: 100vh;
     background-color: black;
     color: white;
+}
+
+.mobileImage {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    width: 95%;
+}
+
+.mobileVideo {
+    position: absolute;
+    top: 30px;
+    left: 38px;
+    width: 91%;
+    border-radius: 70px;
+    z-index: 3;
+}
+
+@media (max-width: 640px) {
+    .mobileVideo {
+        top: 11px;
+        left: 20px;
+        width: 90%;
+        border-radius: 50px;
+    }
 }

@@ -1,4 +1,3 @@
-import React from 'react'
 import Navbar from './Components/Navbar'
 import Hero from './Components/Hero'
 import Highlights from './Components/Highlights'
@@ -13,10 +12,10 @@ const App = () => {
       <Navbar />
       <Hero />
       <Highlights />
-      <Model/>
-      <FullStory/>
-      <Chip/>
-      <Footer/>
+      <Model />
+      <FullStory />
+      <Chip />
+      <Footer />
     </main>
   )
 }
