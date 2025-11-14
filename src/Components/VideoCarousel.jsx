@@ -65,7 +65,7 @@ const VideoCarousel = () => {
         else {
           timeline_video.current.seek(0);
         }
-        timeline_reload.current.play();//This is broken
+        timeline_reload.current.play();
         setVideo((prevVideo) => ({
           ...prevVideo,
           videoId: 0,
@@ -94,6 +94,7 @@ const VideoCarousel = () => {
       else {
         videoRef.current[videoId].pause();
         timeline_video.current.pause();
+        timeline_smallVideo.current.pause();
         timeline_loading.current.pause();
       }
     }
