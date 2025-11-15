@@ -18,8 +18,8 @@ const FullStory = () => {
             y: -50,
             scrollTrigger: {
                 trigger: "#StoryTitle",
-                start: "top 60%",
-                end: "bottom 40%",
+                start: "top 50%",
+                end: "bottom 60%",
                 toggleActions: "play none none reverse", // Add toggleActions
             },
         })
@@ -44,6 +44,10 @@ const FullStory = () => {
                 toggleActions: "play none none reverse", // Add toggleActions
             },
         })
+        document.fonts.ready.then(() => {
+            // 2. Tiny delay for layout
+            setTimeout(() => ScrollTrigger.refresh(), 50);
+        });
     }, [])
 
 
@@ -60,8 +64,8 @@ const FullStory = () => {
             // GSAP ScrollTrigger to control video play/pause
             ScrollTrigger.create({
                 trigger: videoElement, // Element to observe
-                start: "top 70%", // When the top of the video reaches 80% of the viewport
-                end: "bottom 30%", // When the bottom of the video leaves 20% of the viewport
+                start: "top 50%", // When the top of the video reaches 80% of the viewport
+                end: "bottom 40%", // When the bottom of the video leaves 20% of the viewport
                 onEnter: () => {
                     videoElement.currentTime = 0; // Reset video to start
                     videoElement.play();

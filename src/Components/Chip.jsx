@@ -47,12 +47,17 @@ const Chip = () => {
             y: -50,
             scrollTrigger: {
                 trigger: "#ChipText",
-                start: "top 80%",
+                start: "top 90%",
                 end: "bottom 90%",
                 toggleActions: "play none none reverse", // Add toggleActions
             },
             ease: "power1.inOut"
         })
+
+        document.fonts.ready.then(() => {
+            // 2. Tiny delay for layout
+            setTimeout(() => ScrollTrigger.refresh(), 50);
+        });
     }, [])
 
     gsap.registerPlugin(ScrollTrigger);

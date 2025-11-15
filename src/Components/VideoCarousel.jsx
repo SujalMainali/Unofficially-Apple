@@ -195,7 +195,7 @@ const VideoCarousel = () => {
 
           return ( //Here individual videos are rendered
 
-            <div key={item.id} className='flex-col justify-center items-center  relative mx-20 max-sm:mx-5'>
+            <div key={item.id} className='flex-col justify-center items-center z-10 relative mx-20 max-sm:mx-5'>
               {/*This is the text of the video*/}
               <div className="flex flex-col justify-center absolute top-16 left-10 z-20 h-30 max-sm:h-10 max-sm:top-10 max-sm:left-5 max-sm:gap-0 ">
                 {item.text.map((textItem, index) => (
@@ -210,9 +210,9 @@ const VideoCarousel = () => {
 
                 ))}
               </div>
-              <div className='w-full  aspect-video overflow-hidden rounded-3xl'> {/*//This is individual video*/}
+              <div className='w-full aspect-video overflow-hidden'> {/*//This is individual video*/}
                 <video
-                  className='w-full h-full object-cover'
+                  className='w-full h-4/6 object-cover rounded-3xl max-sm:h-5/6'
                   ref={(el) => { videoRef.current[index] = el }} //Here the reference of the individual videos is stored in the videoRef list with proper index
                   muted
                   playsInline={true}
@@ -263,7 +263,7 @@ const VideoCarousel = () => {
         })}
 
       </div>
-      <div className='flex justify-center'> {/*//This is the loading animation and button*/}
+      <div className='flex justify-center relative z-20 -mt-40 max-sm:-mt-16'> {/*//This is the loading animation and button*/}
         <div className='flex justify-center mt-10 mb-30 mb-10'>
           <div className='rounded-3xl bg-gray-600 py-1 px-2 h-16 w-40 flex justify-center items-center gap-4 max-sm:w-32 max-sm:h-10' ref={PlayingRef}>
             {videoObjects.map((item, index) => (
