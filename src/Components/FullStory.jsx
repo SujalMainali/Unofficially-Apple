@@ -10,6 +10,8 @@ const FullStory = () => {
 
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+    gsap.registerPlugin(ScrollTrigger);
+
     useGSAP(() => {
         gsap.to('#StoryTitle', {
             opacity: 1,
@@ -58,8 +60,8 @@ const FullStory = () => {
             // GSAP ScrollTrigger to control video play/pause
             ScrollTrigger.create({
                 trigger: videoElement, // Element to observe
-                start: "top 80%", // When the top of the video reaches 80% of the viewport
-                end: "bottom 20%", // When the bottom of the video leaves 20% of the viewport
+                start: "top 70%", // When the top of the video reaches 80% of the viewport
+                end: "bottom 30%", // When the bottom of the video leaves 20% of the viewport
                 onEnter: () => {
                     videoElement.currentTime = 0; // Reset video to start
                     videoElement.play();
@@ -76,9 +78,8 @@ const FullStory = () => {
 
     }, []);
 
-    gsap.registerPlugin(ScrollTrigger);
     return (
-        <div className='bg-gray-950 mt-40 border border-gray-800'>
+        <div className='bg-gray-950 mt-10 border border-gray-800'>
             <h1 className='mt-32 text-5xl text-gray-500 opacity-0 ml-10 max-sm:text-3xl' id='StoryTitle'>Explore The Full Story</h1>
             <div className='flex flex-col justify-center items-center pt-20'>
                 <div className='text-6xl font-bold max-sm:text-center max-sm:text-3xl'>

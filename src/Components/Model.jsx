@@ -1,11 +1,7 @@
 import { useGSAP } from '@gsap/react'
-import { Canvas } from '@react-three/fiber'
 import gsap from 'gsap'
-import React, { useRef } from 'react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useState } from 'react'
-import * as THREE from 'three'
-import ModelView from './ModelView'
 import { models } from '../constants'
 
 const Model = () => {
@@ -15,15 +11,6 @@ const Model = () => {
     color: ['#8F8A81', '#FFE7B9', '#6F6C64', '#F5F4F2'],
     img: '',
   });
-
-  const cameraControlSmall = useRef();
-  const cameraControlLarge = useRef();
-
-  const small = useRef(new THREE.Group())
-  const large = useRef(new THREE.Group())
-
-  const [smallRotation, setSmallRotation] = useState(0);
-  const [largeRotation, setLargeRotation] = useState(0);
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -47,24 +34,7 @@ const Model = () => {
 
       <div className='flex flex-col items-center mt-5 w-full'>
         <div className='w-full h-[75vh] md:h-[90vh] overflow-hidden'>
-          <ModelView
-            index={1}
-            groupRef={small}
-            gsapType='view1'
-            controlRef={cameraControlSmall}
-            setRotationState={setSmallRotation}
-            item={model}
-            size={size}
-          />
-          <ModelView
-            index={2}
-            groupRef={large}
-            gsapType='view2'
-            controlRef={cameraControlLarge}
-            setRotationState={setLargeRotation}
-            item={model}
-            size={size}
-          />
+
         </div>
 
       </div>

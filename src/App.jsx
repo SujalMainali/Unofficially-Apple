@@ -6,7 +6,12 @@ import FullStory from './Components/FullStory'
 import Chip from './Components/Chip'
 import Footer from './Components/Footer'
 
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 const App = () => {
+  window.addEventListener("load", () => {
+    ScrollTrigger.refresh();
+  });
   return (
     <main className="">
       <Navbar />
